@@ -7,9 +7,6 @@ function shuffleCards() {
     z-index: 0;
     opacity: 1;
     `;
-    // card.style.order = order;
-    // card.style.zIndex = "0";
-    // card.style.opacity = "1";
     card.textContent = "";
   });
 }
@@ -23,7 +20,6 @@ let cardsTrue = [];
 container.addEventListener("click", function (e) {
   e.target.classList.contains("card") ? targetCards.push(e.target) : targetCards;
   if (e.target.classList.contains("card") && turns != 2 && targetCards[0] != targetCards[1]) {
-    // if (turns != 2) {
     let target = e.target.dataset.number;
 
     e.target.textContent = target;
@@ -31,7 +27,6 @@ container.addEventListener("click", function (e) {
 
     targetNum.push(target);
 
-    //   setTimeout(() => {}, 2000);
     if (turns === 2 && targetNum[0] != targetNum[1]) {
       targetCards.forEach((card) => {
         setTimeout(() => {
@@ -41,7 +36,6 @@ container.addEventListener("click", function (e) {
           turns = 0;
         }, 500);
       });
-      //   argetNum[0].dataset.number != targetNum[1].dataset.number
     } else if (turns === 2 && targetNum[0] == targetNum[1]) {
       targetCards.forEach((e) => {
         e.style.opacity = "0";
@@ -59,11 +53,6 @@ container.addEventListener("click", function (e) {
       targetNum = [];
       turns = 0;
     }
-    // }
-    console.log(turns);
-    console.log(targetNum);
-    console.log(targetCards);
-    console.log(cardsTrue);
   } else if (e.target.classList.contains("card") && targetCards[0] == targetCards[1]) {
     targetCards = targetCards.splice(-1);
     console.log(targetCards);
