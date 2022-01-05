@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  background: #d7dde8;
+}
+
+.cards-container {
+  width: max(350px, 80%);
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+}
+
+.card {
+  width: calc(100% / 6);
+  height: calc(100vh / 6);
+  border: 1px solid white;
+  box-sizing: border-box;
+  background: #283048;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  transition: 1s;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  cursor: pointer;
+}
